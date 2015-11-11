@@ -10,7 +10,7 @@ import networkx as nx
 
 
 csvfile = open('tweet.csv')
-# data can be downloaed by using https://github.com/xbwei/GetTwitter/blob/master/Twitter/GetTwitter2CSV.py
+# data can be downloaded by using https://github.com/xbwei/GetTwitter/blob/master/Twitter/GetTwitter2CSV.py
 
 reader = csv.DictReader(csvfile)
 
