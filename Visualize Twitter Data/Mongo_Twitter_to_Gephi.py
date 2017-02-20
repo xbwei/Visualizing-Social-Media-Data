@@ -27,7 +27,7 @@ mentioned_user_graph =nx.Graph()
 # weight is the number of such connections being formed from the entire data
 
 user_to_mention_graph = nx.DiGraph()
-# directed network, each connection is from author to the one of the mentioned users in a single tweet
+# directed network, each connection is from author to  one of the mentioned users in a single tweet
 # weight is the number of such connections being formed from the entire data
 
 
