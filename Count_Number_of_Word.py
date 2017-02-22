@@ -6,7 +6,7 @@ www.lbsocial.net
 '''
 
 '''
-count the number of the most common 10 word
+count the number of the 10 most common words
 and write the result to an excel file
 '''
 import xlwt        
