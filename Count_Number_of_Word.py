@@ -1,4 +1,4 @@
-'''
+,'''
 Created on Feb 22, 2017
 
 @author: Xuebin Wei
@@ -21,7 +21,7 @@ sheet_test.write(i,0,'word') # write the header of the first column
 sheet_test.write(i,1,'count') # write the header of the second column
 sheet_test.write(i,2,'ratio') # write the header of the third column
     
-with open('C:\\Project\\JMU\\2017 Spring\\IA241\\week11\\jmu_news.txt','r',encoding='utf-8') as jmu_news:
+with open('C:\\Project\\JMU\\2017 Spring\\IA241\\week11\\jmu_news.txt','r',encoding='utf-8', errors = 'ignore') as jmu_news:
      
     # convert all the word into lower cases
     # filter out stop words
