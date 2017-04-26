@@ -66,7 +66,7 @@ for document in tweet_cursor:
     i = i+1 
     print(i/num_of_tweet)
     sql_insert_statement = """insert into tweet(tweet_id, user_id,tweet_date, tweet_time, tweet_date_time, x, y,z, place) values('{}','{}','{}','{}','{}','{}','{}','{}','{}');""".format\
-                             (document['id_str'],document["user"]["id_str"],tweet_date,tweet_time,tweet_date_time,x,y,z,unicode(place).encode("utf8"))
+                             (document['id_str'],document["user"]["id_str"],tweet_date,tweet_time,tweet_date_time,x,y,z,place.encode("utf8"))
     try: 
         cursor.execute(sql_insert_statement)
         cursor.commit()
