@@ -4,6 +4,7 @@ Created on Mar 29, 2017
 @author: Xuebin Wei
 www.lbsocial.net
 '''
+
 import pymongo
 from pymongo import MongoClient
 
@@ -23,7 +24,8 @@ num_of_tweet = float(tweet_cursor.count())
 
 db_file = '' #change the location to your Access file
 
-odbc_conn_str = 'DRIVER={Microsoft Access Driver (*.mdb)};DBQ=%s' %(db_file) 
+odbc_conn_str = 'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=%s' %(db_file) # define the odbc connection parameter
+
 
 conn = pyodbc.connect(odbc_conn_str)
 
@@ -48,8 +50,8 @@ for document in tweet_cursor:
          
         i = i+1 
         print(i/num_of_tweet)
-        sql_insert_statement = """insert into tweet(tweet_id, user_id,tweet_date, tweet_time, tweet_date_time, x, y,z) values('{}','{}','{}','{}','{}','{}','{}','{}');""".format\
-                                 (document['id_str'],document["user"]["id_str"],tweet_date,tweet_time,tweet_date_time,document["coordinates"]['coordinates'][0],document["coordinates"]['coordinates'][1],z)
+        sql_insert_statement = """insert into tweet(tweet_id, user_id,tweet_date, tweet_time, tweet_date_time, x, y,z, retweet, favorite) values('{}','{}','{}','{}','{}',{},{},{},{},{});""".format\
+                                 (document['id_str'],document["user"]["id_str"],tweet_date,tweet_time,tweet_date_time,document["coordinates"]['coordinates'][0],document["coordinates"]['coordinates'][1],z,document['retweet_count'],document['favorite_count'])
 
         cursor.execute(sql_insert_statement)
         cursor.commit()
