@@ -46,7 +46,7 @@ for document in tweet_cursor:
         tweet_time = tweet_created_at[3]
         tweet_date_time = tweet_date +' '+tweet_time
         time_diff = datetime.now()-datetime.fromtimestamp(mktime(strptime(tweet_date_time, "%Y-%m-%d %H:%M:%S"))) 
-        z =  50000000.0/time_diff.total_seconds() # height of tweet points, relative time difference to current time, recent tweets on top
+        z =  time_diff.total_seconds()/5000000.0 # height of tweet points, relative time difference to current time, recent tweets on bottom
          
         i = i+1 
         print(i/num_of_tweet)
