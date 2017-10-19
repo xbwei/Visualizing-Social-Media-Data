@@ -4,7 +4,7 @@
 The tools will import the data from the https://github.com/xbwei/BeijingAirExtract project into ArcGIS, and visualize the air data in 3D.
 In the tool box, there are 4 tools:
 
-![alt tag](https://raw.githubusercontent.com/xbwei/3D-Visulization-of-Beijing-Air-data/master/tool.jpg)
+![alt tag](https://github.com/xbwei/Visualizing-Social-Media-Data/blob/master/Visualize%20Beijing%20Air%20Data/beijingair.jpg)
  
 <ul> 
 <li>AddQT Field: create the numeric QT field of all air indices for each table.</li>
