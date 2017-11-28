@@ -21,11 +21,11 @@ sheet_test.write(i,0,'word') # write the header of the first column
 sheet_test.write(i,1,'count') # write the header of the second column
 sheet_test.write(i,2,'ratio') # write the header of the third column
     
-with open('C:\\Project\\JMU\\2017 Spring\\IA241\\week11\\jmu_news.txt','r',encoding='utf-8', errors = 'ignore') as jmu_news:
+with open('text_word.txt','r',encoding='utf-8', errors = 'ignore') as text_word: # read the txtfile containing the words
      
     # convert all the word into lower cases
     # filter out stop words
-    word_list = [i for i in jmu_news.read().lower().split() if i not in stop]
+    word_list = [i for i in text_word.read().lower().split() if i not in stop]
     word_total = word_list.__len__()
      
     count_result =  Counter(word_list)
@@ -35,4 +35,4 @@ with open('C:\\Project\\JMU\\2017 Spring\\IA241\\week11\\jmu_news.txt','r',encod
         sheet_test.write(i,1,result[1])
         sheet_test.write(i,2,(result[1]/word_total))
     
-book.save('C:\\Project\\JMU\\2017 Spring\\IA241\\week11\\word_count.xls')
+book.save('word_count.xls')# save your result in an execel file
