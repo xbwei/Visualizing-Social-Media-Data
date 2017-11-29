@@ -1,6 +1,5 @@
 '''
 Created on Apr 25, 2017
-
 @author: Xuebin Wei
 www.lbsocial.net
 '''
@@ -12,11 +11,12 @@ from datetime import datetime
 from time import strptime
 import pyodbc 
 from pprint import pprint
-client = MongoClient()#type your own server configuration 
 
+client = MongoClient("")#type your own server configuration 
 db = client.tweet_db # change to your tweet db
 
 tweet_collection = db.tweet_collection # change to your tweet collection
+
 tweet_collection.create_index([("id", pymongo.ASCENDING)],unique = True)
 # tweet_cursor = tweet_collection.find({'coordinates' : {"$ne" : None}}) # get tweet with coordinates
 tweet_cursor = tweet_collection.find({'id' : {"$ne" : None}})
@@ -53,9 +53,9 @@ for document in tweet_cursor:
         z = (time_diff.total_seconds()+4.0*60*60)/50000.0 # height of tweet points, relative time difference to current time, recent tweets on top
 
     else:
-        x = -999
-        y = -999
-        z = -999
+        x =  'Null'
+        y =  'Null'
+        z =  'Null'
     
     if document["place"] is not None:
         place = document["place"]["full_name"]
@@ -64,12 +64,12 @@ for document in tweet_cursor:
         place = document["user"]["location"]
     else:
         place = 'None'
-#     print unicode(place).encode("utf8")
+
     i = i+1 
     print(i/num_of_tweet)
-    print (i)
-    sql_insert_statement = """insert into tweet(tweet_id, user_id,tweet_date, tweet_time, tweet_date_time, x, y,z, place) values('{}','{}','{}','{}','{}','{}','{}','{}','{}');""".format\
-                             (document['id_str'],document["user"]["id_str"],tweet_date,tweet_time,tweet_date_time,x,y,z,place.encode("utf8"))
+#     print (i)
+    sql_insert_statement = """insert into tweet(tweet_id, user_id,tweet_date, tweet_time, tweet_date_time, x, y,z, place) values('{}','{}','{}','{}','{}',{},{},{},'{}');""".format\
+                             (document['id_str'],document["user"]["id_str"],tweet_date,tweet_time,tweet_date_time,x,y,z,place)
 #     print (sql_insert_statement)
     try: 
         cursor.execute(sql_insert_statement)
