@@ -23,8 +23,8 @@ tweet_cursor = tweet_collection.find({'id' : {"$ne" : None}})
 num_of_tweet = float(tweet_cursor.count())
 
 db_file = '' #change the location to your Access file
+odbc_conn_str = 'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=%s' %(db_file) # define the odbc connection parameter
 
-odbc_conn_str = 'DRIVER={Microsoft Access Driver (*.mdb)};DBQ=%s' %(db_file) 
 
 conn = pyodbc.connect(odbc_conn_str)
 
