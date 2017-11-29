@@ -12,7 +12,7 @@ from datetime import datetime
 from time import strptime
 import pyodbc 
 from pprint import pprint
-client = MongoClient()
+client = MongoClient()#type your own server configuration 
 
 db = client.tweet_db # change to your tweet db
 
@@ -22,7 +22,7 @@ tweet_collection.create_index([("id", pymongo.ASCENDING)],unique = True)
 tweet_cursor = tweet_collection.find({'id' : {"$ne" : None}})
 num_of_tweet = float(tweet_cursor.count())
 
-db_file = 'C:\\Project\\Paper\\EININO\\Data and Pic\\mongo\\elnino_tweet_place.mdb' #change the location to your Access file
+db_file = '' #change the location to your Access file
 
 odbc_conn_str = 'DRIVER={Microsoft Access Driver (*.mdb)};DBQ=%s' %(db_file) 
 
@@ -50,8 +50,8 @@ for document in tweet_cursor:
     if document["coordinates"] is not None:
         x = document["coordinates"]['coordinates'][0]
         y = document["coordinates"]['coordinates'][1]
-        z =  50000000.0/time_diff.total_seconds() # height of tweet points, relative time difference to current time, recent tweets on top
-        print (x,y,z)
+        z = (time_diff.total_seconds()+4.0*60*60)/50000.0 # height of tweet points, relative time difference to current time, recent tweets on top
+
     else:
         x = -999
         y = -999
