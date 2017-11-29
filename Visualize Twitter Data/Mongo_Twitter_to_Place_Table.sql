@@ -7,7 +7,7 @@ tweet_date_time Text,
 x Double,
 y Double,
 z Double,
-plae Text,
+place Text,
 
 PRIMARY KEY(tweet_id)
 );
