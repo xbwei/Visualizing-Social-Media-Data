@@ -12,7 +12,7 @@ from time import strptime
 import pyodbc 
 from pprint import pprint
 
-client = MongoClient("")#type your own server configuration 
+client = MongoClient()#type your own server configuration 
 db = client.tweet_db # change to your tweet db
 
 tweet_collection = db.tweet_collection # change to your tweet collection
