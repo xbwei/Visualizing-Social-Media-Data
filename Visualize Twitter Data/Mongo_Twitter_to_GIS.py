@@ -19,8 +19,6 @@ print (db.collection_names())
 
 tweet_collection = db.tweet_collection # change to your tweet collectiontweet_cursor = tweet_collection.find()
  
-print (tweet_cursor.count())
-
 tweet_collection.create_index([("id", pymongo.ASCENDING)],unique = True)
 tweet_collection.create_index([("coordinates", pymongo.ASCENDING)])
 
