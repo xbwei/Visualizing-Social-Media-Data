@@ -13,9 +13,7 @@ from time import strptime
 import pyodbc 
 client = MongoClient()#type your own server configuration 
 
-db = client.gpdemo # change to your tweet database
-print (db.collection_names())
-
+db = client.tweet_db # change to your tweet db
 
 tweet_collection = db.tweet_collection # change to your tweet collectiontweet_cursor = tweet_collection.find()
  
