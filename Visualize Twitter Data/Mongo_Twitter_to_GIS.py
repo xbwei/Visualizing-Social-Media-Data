@@ -17,8 +17,7 @@ db = client.gpdemo # change to your tweet database
 print (db.collection_names())
 
 
-tweet_collection = db.tweet_collection_gis # change to your tweet collection
-tweet_cursor = tweet_collection.find()
+tweet_collection = db.tweet_collection # change to your tweet collectiontweet_cursor = tweet_collection.find()
  
 print (tweet_cursor.count())
 
