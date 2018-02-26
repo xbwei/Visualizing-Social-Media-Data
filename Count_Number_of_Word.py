@@ -11,9 +11,7 @@ and write the result to an excel file
 '''
 import xlwt        
 from collections import Counter        
-from nltk.corpus import stopwords
-stop = set(stopwords.words('english'))
-  
+
 book = xlwt.Workbook() # create a new excel file
 sheet_test = book.add_sheet('word_count') # add a new sheet
 i = 0
@@ -23,10 +21,6 @@ sheet_test.write(i,2,'ratio') # write the header of the third column
     
 with open('text_word.txt','r',encoding='utf-8', errors = 'ignore') as text_word: # read the txtfile containing the words
      
-    # convert all the word into lower cases
-    # filter out stop words
-    word_list = [i for i in text_word.read().lower().split() if i not in stop]
-    word_total = word_list.__len__()
      
     count_result =  Counter(word_list)
     for result in count_result.most_common(10):
