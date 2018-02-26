@@ -3,9 +3,8 @@ Created on Feb 22, 2017
 
 @author: Xuebin Wei
 www.lbsocial.net
-'''
 
-'''
+excluse stopwords 
 find the 10 most common words
 and write the result to an excel file
 '''
