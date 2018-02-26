@@ -20,7 +20,7 @@ sheet_test.write(i,0,'word') # write the header of the first column
 sheet_test.write(i,1,'count') # write the header of the second column
 sheet_test.write(i,2,'ratio') # write the header of the third column
     
-with open('text_word.txt','r',encoding='utf-8', errors = 'ignore') as text_word: # read the txtfile containing the words
+with open('','r',encoding='utf-8', errors = 'ignore') as text_word: # defin the location of your txt file
      
     # convert all the word into lower cases
     # filter out stop words
@@ -34,4 +34,4 @@ with open('text_word.txt','r',encoding='utf-8', errors = 'ignore') as text_word:
         sheet_test.write(i,1,result[1])
         sheet_test.write(i,2,(result[1]/word_total))
     
-book.save('word_count.xls')# save your result in an execel file
+book.save('')# define the location of your excel file
