@@ -1,4 +1,4 @@
-# Visualizing-Social-Media-Data
+# Visualizing Social Media Data
 A set of visualization tools to help understand patterns and relationships of social media data.
 
 Video tutorial: https://www.youtube.com/channel/UCwtRYX-OsUj4VHLic2XQYog/featured
