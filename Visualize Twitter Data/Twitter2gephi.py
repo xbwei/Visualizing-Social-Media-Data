@@ -20,22 +20,22 @@ for row in reader:
 
     people = []
     people.append(row['tweetuser'])
-    if row['mention']<>'':
+    if row['mention']!='':
 #         print row['mention']
         i = i+1
         for mentioned_user in (row['mention'].split(",")[:-1]):
             
 #             print '\t',mentioned_user
             people.append(mentioned_user)
-    if row['replyuser'] <>'':
+    if row['replyuser'] !='':
         people.append(row['replyuser'])
-    if row['retweetuser'] <>'':
+    if row['retweetuser'] !='':
         people.append(row['retweetuser'])
     unique_people = list(set(people))
     if len(unique_people) > 1:
         for people1 in unique_people:
             for people2 in unique_people:
-                if people1 <> people2:
+                if people1 != people2:
                     if nxg.has_edge(people1, people2):
                         nxg[people1][people2]['weight'] =0.5 + nxg[people1][people2]['weight']
         #                             print nxg.number_of_edges(people1, people2)
