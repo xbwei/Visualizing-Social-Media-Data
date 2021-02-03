@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.2" xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="undirected" mode="static" name="">
+    <meta>
+      <creator>NetworkX 2.1</creator>
+      <lastmodified>19/03/2019</lastmodified>
+    </meta>
+    <nodes>
+      <node id="NC03" label="NC03" />
+      <node id="MAGA" label="MAGA" />
+      <node id="NTK" label="NTK" />
+      <node id="VellaporaanVivasayi" label="VellaporaanVivasayi" />
+      <node id="abvote" label="abvote" />
+      <node id="ableg" label="ableg" />
+      <node id="yeg" label="yeg" />
+      <node id="yyc" label="yyc" />
+      <node id="PeteTong" label="PeteTong" />
+      <node id="NoBrexit" label="NoBrexit" />
+      <node id="RevokeArticle50" label="RevokeArticle50" />
+      <node id="article13" label="article13" />
+      <node id="FactCheckEU" label="FactCheckEU" />
+      <node id="RTE" label="RTE" />
+      <node id="Ireland" label="Ireland" />
+      <node id="Eurovision" label="Eurovision" />
+      <node id="Israel" label="Israel" />
+      <node id="JonathanSugarman" label="JonathanSugarman" />
+      <node id="Jews" label="Jews" />
+      <node id="FreePalestine" label="FreePalestine" />
+      <node id="Gaza" label="Gaza" />
+      <node id="FightingForYou" label="FightingForYou" />
+      <node id="CheatIndia" label="CheatIndia" />
+      <node id="loksabhaeections2019" label="loksabhaeections2019" />
+      <node id="Mitron56inch" label="Mitron56inch" />
+      <node id="TrumpTrain" label="TrumpTrain" />
+      <node id="TrumpTrain2020" label="TrumpTrain2020" />
+      <node id="Election2020" label="Election2020" />
+      <node id="USA" label="USA" />
+    </nodes>
+    <edges>
+      <edge id="0" source="NC03" target="MAGA" weight="1.0" />
+      <edge id="1" source="NTK" target="VellaporaanVivasayi" weight="1.0" />
+      <edge id="2" source="abvote" target="ableg" weight="1.0" />
+      <edge id="3" source="abvote" target="yeg" weight="1.0" />
+      <edge id="4" source="abvote" target="yyc" weight="1.0" />
+      <edge id="5" source="ableg" target="yeg" weight="1.0" />
+      <edge id="6" source="ableg" target="yyc" weight="1.0" />
+      <edge id="7" source="ableg" target="FightingForYou" weight="1.0" />
+      <edge id="8" source="yeg" target="yyc" weight="1.0" />
+      <edge id="9" source="PeteTong" target="NoBrexit" weight="1.0" />
+      <edge id="10" source="PeteTong" target="RevokeArticle50" weight="1.0" />
+      <edge id="11" source="NoBrexit" target="RevokeArticle50" weight="1.0" />
+      <edge id="12" source="article13" target="FactCheckEU" weight="1.0" />
+      <edge id="13" source="RTE" target="Ireland" weight="1.0" />
+      <edge id="14" source="RTE" target="Eurovision" weight="1.0" />
+      <edge id="15" source="RTE" target="Israel" weight="1.0" />
+      <edge id="16" source="RTE" target="JonathanSugarman" weight="1.0" />
+      <edge id="17" source="RTE" target="Jews" weight="1.0" />
+      <edge id="18" source="RTE" target="FreePalestine" weight="1.0" />
+      <edge id="19" source="RTE" target="Gaza" weight="1.0" />
+      <edge id="20" source="Ireland" target="Eurovision" weight="1.0" />
+      <edge id="21" source="Ireland" target="Israel" weight="1.0" />
+      <edge id="22" source="Ireland" target="JonathanSugarman" weight="1.0" />
+      <edge id="23" source="Ireland" target="Jews" weight="1.0" />
+      <edge id="24" source="Ireland" target="FreePalestine" weight="1.0" />
+      <edge id="25" source="Ireland" target="Gaza" weight="1.0" />
+      <edge id="26" source="Eurovision" target="Israel" weight="1.0" />
+      <edge id="27" source="Eurovision" target="JonathanSugarman" weight="1.0" />
+      <edge id="28" source="Eurovision" target="Jews" weight="1.0" />
+      <edge id="29" source="Eurovision" target="FreePalestine" weight="1.0" />
+      <edge id="30" source="Eurovision" target="Gaza" weight="1.0" />
+      <edge id="31" source="Israel" target="JonathanSugarman" weight="1.0" />
+      <edge id="32" source="Israel" target="Jews" weight="1.0" />
+      <edge id="33" source="Israel" target="FreePalestine" weight="1.0" />
+      <edge id="34" source="Israel" target="Gaza" weight="1.0" />
+      <edge id="35" source="JonathanSugarman" target="Jews" weight="1.0" />
+      <edge id="36" source="JonathanSugarman" target="FreePalestine" weight="1.0" />
+      <edge id="37" source="JonathanSugarman" target="Gaza" weight="1.0" />
+      <edge id="38" source="Jews" target="FreePalestine" weight="1.0" />
+      <edge id="39" source="Jews" target="Gaza" weight="1.0" />
+      <edge id="40" source="FreePalestine" target="Gaza" weight="1.0" />
+      <edge id="41" source="CheatIndia" target="loksabhaeections2019" weight="1.0" />
+      <edge id="42" source="CheatIndia" target="Mitron56inch" weight="1.0" />
+      <edge id="43" source="loksabhaeections2019" target="Mitron56inch" weight="1.0" />
+      <edge id="44" source="TrumpTrain" target="TrumpTrain2020" weight="1.0" />
+      <edge id="45" source="TrumpTrain" target="Election2020" weight="1.0" />
+      <edge id="46" source="TrumpTrain" target="USA" weight="1.0" />
+      <edge id="47" source="TrumpTrain2020" target="Election2020" weight="1.0" />
+      <edge id="48" source="TrumpTrain2020" target="USA" weight="1.0" />
+      <edge id="49" source="Election2020" target="USA" weight="1.0" />
+    </edges>
+  </graph>
+</gexf>
