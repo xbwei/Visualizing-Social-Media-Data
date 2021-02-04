@@ -5,4 +5,4 @@ The datasets for creating VR scene on AWS Sumerian
 * [pen rcm file](https://drive.autodesk.com/de29903f7/shares/SH919a0QTf3c32634dcf6c02afa293cd3018)
 * [pen fbx file](https://drive.autodesk.com/de29903f7/shares/SH919a0QTf3c32634dcfae12abdcfcc76522)
 
-demo vr scene https://us-east-1.sumerian.aws/721c4194053b4c479ad663575c4f9db9.scene
+demo vr scene https://us-east-1.sumerian.aws/721c4194053b4c479ad663575c4f9db9.scene  
